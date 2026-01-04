@@ -1,0 +1,418 @@
+/* ---------- ESTILOS GERAIS E LAYOUT BASE ---------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #fedddb;
+  font-family: sans-serif;
+}
+
+.content {
+  padding: 30px 20px 20px 20px;
+  margin-top: 60px; /* Espaço para o menu fixo */
+  width: auto;
+  background: #fedddb;
+  display: grid;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content .titleTop {
+  position: fixed;
+  top: 55px; /* Ajuste para descer um pouco */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px; /* Limite máximo de largura */
+  padding: 15px 0;
+  background-color: #f098c0;
+  border-radius: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #4b1916;
+  z-index: 999;
+}
+
+
+/* ---------- MENU DE NAVEGAÇÃO ---------- */
+.sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+}
+
+.sidebar a {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+  height: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar a.active {
+  background-color: #f098c0;
+  color: #000;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #fedddb;
+  color: #4b1916;
+}
+
+
+/* ---------- PÁGINA INICIAL (CARDÁPIO) ---------- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 30px;
+  justify-items: center;
+  margin-top: 80px; /* Ajuste para compensar o título fixo */
+}
+
+.item {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden; /* Garante que a imagem não ultrapasse o border-radius */
+}
+
+.item:hover {
+  transform: scale(1.03);
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.nome-doce {
+  display: block;
+  padding: 15px 8px; /* Mais espaço vertical */
+  font-weight: bold;
+  color: #4b1916;
+  background-color: #fff; /* Fundo branco para uniformidade */
+}
+
+
+/* ---------- PÁGINAS DE DESCRIÇÃO DE PRODUTO ---------- */
+.descricao-produto {
+  text-align: center;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.produto-img {
+  max-width: 100%; /* Torna a imagem responsiva */
+  width: 600px;    /* Define uma largura preferencial */
+  border-radius: 50px;
+}
+
+.descricao-produto p {
+  font-size: 30px;
+}
+
+.produto-preco {
+    margin-top: -20px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+
+/* ---------- PÁGINA DE FORMULÁRIO ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto;
+  margin-top: -30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.form-ajustado {
+    margin-top: -10px; /* Valor reduzido para diminuir o espaço */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #4b1916;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-submit {
+  background-color: #f098c0;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px; /* Aumenta o texto do botão */
+}
+
+.form-submit:hover {
+  background-color: #e877ae;
+}
+
+
+/* ---------- PÁGINA DE RESUMO DO PEDIDO (formAction.php) ---------- */
+.resumo-pedido {
+  max-width: 600px;
+  margin: 30px auto;
+  margin-top: -30px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.resumo-pedido table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resumo-pedido td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.resumo-pedido td.label {
+  font-weight: bold;
+  color: #4b1916;
+  width: 40%;
+}
+
+.resumo-pedido td.valor {
+  color: #000;
+}
+
+
+/* ---------- PÁGINA SOBRE (about.php) ---------- */
+.about-container {
+  max-width: 900px;
+  margin: 40px auto;
+  margin-top: 80px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  color: #4b1916;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about-container h2 {
+  margin-top: 30px;
+  color: #f098c0;
+  text-align:center;
+}
+
+.about-container ul {
+  padding-left: 20px;
+  list-style-type: square;
+}
+
+.about-container li {
+  margin-bottom: 10px;
+}
+
+.about-container a {
+  color: #f098c0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-container a:hover {
+  text-decoration: underline;
+}
+
+/* Cria um estilo "nomeado" para centralizar tabelas específicas */
+.tabela-centralizada th, .tabela-centralizada td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Container para o botão "Adicionar Produto", ajustando o espaçamento superior */
+.area-botao-topo {
+    margin-top: -25px;   /* Cria espaço para o menu e o título fixos */
+    margin-bottom: 25px; /* Cria um espaço antes da tabela */
+    text-align: center;  /* Centraliza o botão na página */
+}
+
+/* Estilo para o botão "Adicionar Produto" */
+.btn-adicionar {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #eb1cadc7; /* Mesma cor do "Gerenciar Produtos" */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar:hover {
+    background-color: #c2185b; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilos para os botões de Ações na tabela (Editar/Excluir) */
+.btn-editar, .btn-excluir {
+    display: inline-block;
+    padding: 6px 12px;       /* Diminui o padding para botões menores */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 4px;           /* Adiciona um pequeno espaço entre os botões */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.btn-editar:hover, .btn-excluir:hover {
+    transform: translateY(-2px); /* Efeito de "levantar" ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Cor específica para o botão Editar */
+.btn-editar {
+    background-color: #3498db98; /* Azul */
+}
+
+/* Cor específica para o botão Excluir */
+.btn-excluir {
+    background-color: #e74d3c86; /* Vermelho */
+}
+
+/* Container para o botão "Voltar" abaixo do formulário */
+.area-botao-inferior {
+    text-align: center;
+    margin-top: -10px; /* Espaço entre o formulário e o botão */
+}
+
+/* Estilo para o botão "Voltar" */
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #6c757d; /* Um cinza neutro e elegante */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #5a6268; /* Cinza um pouco mais escuro ao passar o mouse */
+}
+
+.dashboard-botoes {
+    text-align: center;
+    margin-top: 30px;
+}
+.btn-dashboard {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+.btn-gerenciar { background-color: #e91e63; }
+.btn-ver-form { background-color: #9c27b0; }
+
+/* Usado para ajustar o login e register */
+.superior {
+    margin-top: 80px; 
+}
+
+/* =============================================== */
+/* == ESTILOS ESPECÍFICOS PARA A PÁGINA "MEUS PEDIDOS" == */
+/* =============================================== */
+
+/* 1. Container que organiza toda a página "Meus Pedidos" */
+.container-meus-pedidos {
+    max-width: 1100px;
+    margin: -20px auto 40px auto; /* Espaçamento: 120px topo, auto laterais, 40px baixo */
+    padding: 0;
+}
+
+/* 2. Estilo visual da tabela, similar à de produtos */
+.tabela-meus-pedidos {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tabela-meus-pedidos th, .tabela-meus-pedidos td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.tabela-meus-pedidos th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+/* 3. Espaçamento para o botão "Voltar" */
+.area-botao-meus-pedidos {
+    text-align: center;
+    margin-top: 30px; /* Garante espaço abaixo da tabela */
+}
+
+/* Estilo para mensagens de erro em formulários */
+.mensagem-erro {
+    padding: 15px;
+    margin-bottom: 20px; /* Cria um espaço entre a mensagem e o campo "Email" */
+    background-color: #f8d7da; /* Fundo vermelho claro */
+    color: #721c24;           /* Texto vermelho escuro */
+    border: 1px solid #f5c6cb;  /* Borda vermelha */
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
