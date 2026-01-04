@@ -28,7 +28,7 @@ Projeto acadêmico com foco em aprendizado prático, boas práticas de desenvolv
 ---
 
 ## 📁 Estrutura do Projeto
-
+```
 ├── crud/ # Operações de CRUD dos produtos
 │ ├── cadastrar_produto/
 │ ├── editar_produto/
@@ -46,7 +46,7 @@ Projeto acadêmico com foco em aprendizado prático, boas práticas de desenvolv
 │
 ├── script/ # Scripts JavaScript
 ├── confeitaria.sql # Estrutura do banco de dados (SQL)
-
+```
 ---
 
 ## 🗄️ Banco de Dados
