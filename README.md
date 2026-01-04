@@ -93,7 +93,7 @@ Este projeto foi desenvolvido com fins educacionais para a disciplina de Anális
 
 --- 
 
-##👨‍💻 Autor
+## 👨‍💻 Autor
 
 Rikelmy Felipe Ribeiro Silva
 Estudante de Análise e Desenvolvimento de Sistemas
