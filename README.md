@@ -7,6 +7,20 @@ Projeto acadêmico com foco em aprendizado prático, boas práticas de desenvolv
 
 ---
 
+## 📸 Demonstração Visual
+
+| Área do Cliente (Cardápio) |
+|:---:|
+| ![Cardápio Digital](screenshots/home.png) |
+| *Interface responsiva onde os clientes visualizam os produtos.* |
+
+| Gestão Administrativa (CRUD) | Cadastro de Produtos |
+|:---:|:---:|
+| ![Lista de Produtos](screenshots/admin-lista.png) | ![Formulário de Cadastro](screenshots/admin-cadastro.png) |
+| *Controle total de estoque com opções de editar e excluir.* | *Upload de imagens e categorização de itens.* |
+
+--- 
+
 ## 🚀 Funcionalidades
 
 - **Autenticação Segura:** Login para usuários e administradores.
